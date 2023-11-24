@@ -1,38 +1,74 @@
 # import database module
+from database import ConvertCsv, DataBase, Table
+import csv
 
-# define a funcion called initializing
+my_DB = DataBase()
 
+
+# define a function called initializing
 def initializing():
-    pass
+    # converter object
+    converter = ConvertCsv()
+    # convert persons.csv to table and insert in database
+    converted_person = converter.csv_to_table('persons.csv')
+    persons = Table('persons', converted_person)
+    my_DB.insert(persons)
+    # convert persons.csv to table and insert in database
+    converted_login = converter.csv_to_table('login.csv')
+    login = Table('login', converted_login)
+    my_DB.insert(login)
+    # create project_table object and insert into database
+    project_table = Table('project_table', [])
+    my_DB.insert(project_table)
+    # create advisor_pending_request object and insert into database
+    advisor_pending_request = Table('advisor_pending_table', [])
+    my_DB.insert(advisor_pending_request)
+    # create  object and insert into database
+    member_pending_request = Table('member_pending_table', [])
+    my_DB.insert(member_pending_request)
 
-# here are things to do in this function:
 
-    # create an object to read all csv files that will serve as a persistent state for this program
-
-    # create all the corresponding tables for those csv files
-
-    # see the guide how many tables are needed
-
-    # add all these tables to the database
-
-
-# define a funcion called login
-
+# define a function called login
 def login():
-    pass
+    """
+    check if username and password match
+    :return:
+    """
+    username = input('Enter username: ')
+    password = input('Enter password: ')
+    username_ls = [x['username'] for x in my_DB.search('login').table]
+    password_ls = [x['password'] for x in my_DB.search('login').table]
+    # print(username_ls)
+    # print(password_ls)
+    if username in username_ls:
+        user_index = username_ls.index(username)
+        if password == password_ls[user_index]:
+            return (
+                my_DB.search('login').select(['person_id', 'role'])[user_index]
+            )
+        else:
+            return None
+    else:
+        return None
 
-# here are things to do in this function:
-   # add code that performs a login task
-        # ask a user for a username and password
-        # returns [ID, role] if valid, otherwise returning None
 
 # define a function called exit
 def exit():
-    pass
+    print('Table: persons')
+    for i in my_DB.search('persons').table:
+        print(i)
+    print('-----')
+    print('Table: login')
+    for i in my_DB.search('login').table:
+        print(i)
+    print('-----')
 
 # here are things to do in this function:
    # write out all the tables that have been modified to the corresponding csv files
-   # By now, you know how to read in a csv file and transform it into a list of dictionaries. For this project, you also need to know how to do the reverse, i.e., writing out to a csv file given a list of dictionaries. See the link below for a tutorial on how to do this:
+   # By now, you know how to read in a csv file and transform it into a list
+   # of dictionaries. For this project, you also need to know how to do the reverse,
+   # i.e., writing out to a csv file given a list of dictionaries. See the link below
+   # for a tutorial on how to do this:
    
    # https://www.pythonforbeginners.com/basics/list-of-dictionaries-to-csv-in-python
 
@@ -42,7 +78,9 @@ def exit():
 initializing()
 val = login()
 
-# based on the return value for login, activate the code that performs activities according to the role defined for that person_id
+
+# based on the return value for login, activate the code that performs
+# activities according to the role defined for that person_id
 
 # if val[1] = 'admin':
     # see and do admin related activities
@@ -57,5 +95,5 @@ val = login()
 # elif val[1] = 'advisor':
     # see and do advisor related activities
 
-# once everyhthing is done, make a call to the exit function
+# once everything is done, make a call to the exit function
 exit()
