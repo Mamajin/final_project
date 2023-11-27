@@ -18,13 +18,15 @@ What does each role do?
         - See the request to be a supervisor
         - Send response denying to be as an advisor
         - See details of all projects
-        - Evaluate projects ***
+        - Evaluate projects *** (more details in the proposal)
     - Advising Faculty
         - See request to be a supervisor
         - Send accept response to projects eventually becoming an advisor
         - Send deny response for projects eventually not becoming an advisor
         - See details of all the projects
-        - Evaluate projects ***
+        - Evaluate projects *** (more details in the proposal)
         - Approve the projects
 3. Admin
     - Can update all tables there
+    - Can view all the table with an Admin specific command
+    - See history of the changes done ???
