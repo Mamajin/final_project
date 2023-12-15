@@ -140,3 +140,6 @@ class Table:
                 index = self.table.index(i)
                 self.table[index][key] = new_value
 
+    def __str__(self):
+        return f"{self.table_name}: {str(self.table)}"
+
