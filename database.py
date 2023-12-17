@@ -127,16 +127,17 @@ class Table:
         self.table.append(new_dict)
 
     # new code added as a requirement
-    def update(self, user_id, key, new_value):
+    def update(self, user_id, key_id, key, new_value):
         """
         Updates the value of a key indication
+        :param key_id:
         :param user_id:
         :param key:
         :param new_value:
         :return:
         """
         for i in self.table:
-            if i['id'] == user_id:
+            if i[key_id] == user_id:
                 index = self.table.index(i)
                 self.table[index][key] = new_value
 
