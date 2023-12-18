@@ -95,7 +95,7 @@ class Admin:
         else:
             print("That table does not exist. Please try again")
 
-    def insert_table(self):
+    def insert_dict(self):
         """
         insert new dict into a table
         :return:
@@ -783,7 +783,7 @@ if val[1] == 'admin':
             admin.edit_table()
         # insert dict in table
         elif choice == 3:
-            admin.insert_table()
+            admin.insert_dict()
         # delete dict in table
         elif choice == 4:
             admin.delete_dict()
