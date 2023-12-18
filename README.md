@@ -63,6 +63,9 @@
     6. See the changes made corresponding to what you did in the csv files
 
 
+### 3.) Table ###
+    This tables shows classes and methods each role goes through to do the actions
+
 |  Role   |                   Action                    |         Method         |  Class  | Completion percentage |
 |:-------:|:-------------------------------------------:|:----------------------:|:-------:|:---------------------:|
 |  Admin  |                 View table                  |      check_table       |  Admin  |         100%          |
@@ -90,7 +93,7 @@
 | Advisor | Change the project status for their project | change_project_status  | Advisor |         100%          |
 
 
-### 3.) Missing features and Outstanding bugs ###
+### 4.) Missing features and Outstanding bugs ###
 
 1. [*** Missing features ***]
     - No private comment sending method for the advisor role to send to the 
