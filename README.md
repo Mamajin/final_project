@@ -5,8 +5,8 @@
     2. project_manage.py
     3. persons.csv
     4. login.csv
-    5. member_pending.csv
-    6. advisor_pending.csv
+    5. member_pending_table.csv
+    6. advisor_pending_table.csv
     7. TODO.md
     8. Proposal.md
     9. README.md
