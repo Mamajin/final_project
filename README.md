@@ -1,6 +1,6 @@
-# Final project: Senior Project Submissions Program
+# Final project for 2023's 219114/115 Programming I
 
-### 1.) Files in this repository ###
+## 1.) Files in this repository
     1. database.py
     2. project_manage.py
     3. persons.csv
@@ -11,7 +11,7 @@
     8. Proposal.md
     9. README.md
 
-1. database.py
+1. ### database.py
    - class ConvertCsv:
         This class is used to convert csv files into table.
    - class Database:
@@ -21,7 +21,7 @@
         This class is used to store a list of dictionaries in an object. This
         class also provide users with useful methods make data management easier.
 
-2. project_manage.py
+2. ### project_manage.py
    - class Admin:
         This class has can edit, update, view, insert and delete every table in
         the database.
@@ -42,7 +42,7 @@
         everything the faculty can do, but this role can also Approve or Deny 
         the students' projects.
    
-   Additional functions in project_manage.py:
+   #### Additional functions in project_manage.py:
    - initializing:
         This functions creates and store all the tables needed for the program.
    - login:
@@ -53,28 +53,28 @@
         It updates and store the changes made from the tables in the database in
         .csv files.
    
-3. persons.csv
+3. ### persons.csv
    - Contains information about persons
 
-4. login.csv
+4. ### login.csv
     - Contains information about login data
 
-5. member_pending_table.csv
+5. ### member_pending_table.csv
     - Store information about pending members
 
-6. advisor_pending_table.csv
+6. ### advisor_pending_table.csv
     - Store information about pending advisors
 
-7. TODO.md
+7. ### TODO.md
     - a list of todos
 
-8. Proposal.md
+8. ### Proposal.md
     - Proposals from final project part 1
 
-9. README.md
+9. ### README.md
     - Explains about the project in depth        
 
-### 2.) How to run this project ###
+## 2.) How to run this project
     1. Clone this repo on your local IDE
     2. Run project_manage.py
     3. Login to any account
@@ -83,7 +83,7 @@
     6. See the changes made corresponding to what you did in the csv files
 
 
-### 3.) Table ###
+## 3.) Table
     This tables shows classes and methods each role goes through to do the actions
 
 |  Role   |                   Action                    |         Method         |  Class  | Completion percentage |
@@ -113,16 +113,16 @@
 | Advisor | Change the project status for their project | change_project_status  | Advisor |         100%          |
 
 
-### 4.) Missing features and Outstanding bugs ###
+## 4.) Missing features and Outstanding bugs
 
-1. Missing features
+1. ### Missing features
     - No private comment sending method for the advisor role to send to the 
       group.
     - More in depth grading system for advisors and faculties. This will allow
       Faculties and advisor to grade projects beyond just the current Approve 
       And denying the project
 
-2. Known Bugs
+2. ### Known Bugs
     - For all the roles, if you do not use the exit in the program the csv files
       will not update according to the changes made in your table
     - Students can send request and accept themselves into the group
