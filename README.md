@@ -11,7 +11,7 @@
     8. Proposal.md
     9. README.md
 
-1. [*** database.py ***]
+1. database.py
    - class ConvertCsv:
         This class is used to convert csv files into table.
    - class Database:
@@ -21,7 +21,7 @@
         This class is used to store a list of dictionaries in an object. This
         class also provide users with useful methods make data management easier.
 
-2. [*** project_manage.py ***]
+2. project_manage.py
    - class Admin:
         This class has can edit, update, view, insert and delete every table in
         the database.
@@ -42,7 +42,7 @@
         everything the faculty can do, but this role can also Approve or Deny 
         the students' projects.
    
-   Additional functions in this file:
+   Additional functions in project_manage.py:
    - initializing:
         This functions creates and store all the tables needed for the program.
    - login:
@@ -52,7 +52,27 @@
         This function runs at the end when a user is no longer using the program.
         It updates and store the changes made from the tables in the database in
         .csv files.
-        
+   
+3. persons.csv
+   - Contains information about persons
+
+4. login.csv
+    - Contains information about login data
+
+5. member_pending_table.csv
+    - Store information about pending members
+
+6. advisor_pending_table.csv
+    - Store information about pending advisors
+
+7. TODO.md
+    - a list of todos
+
+8. Proposal.md
+    - Proposals from final project part 1
+
+9. README.md
+    - Explains about the project in depth        
 
 ### 2.) How to run this project ###
     1. Clone this repo on your local IDE
@@ -95,14 +115,14 @@
 
 ### 4.) Missing features and Outstanding bugs ###
 
-1. [*** Missing features ***]
+1. Missing features
     - No private comment sending method for the advisor role to send to the 
       group.
     - More in depth grading system for advisors and faculties. This will allow
       Faculties and advisor to grade projects beyond just the current Approve 
       And denying the project
 
-2. [*** Known Bugs ***]
+2. Known Bugs
     - For all the roles, if you do not use the exit in the program the csv files
       will not update according to the changes made in your table
     - Students can send request and accept themselves into the group
